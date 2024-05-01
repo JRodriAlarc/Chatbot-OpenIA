@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".design_whatsapp_interface">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="55sp"
+        android:background="@drawable/rounded_bottom_corners"
+        android:backgroundTint="#B5C7EC"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="CONVERSACIÓN"
+        android:textColor="#131210"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="368dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewMensajes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="#ffffff"
+        tools:layout_editor_absoluteY="368dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_top_corners"
+        android:backgroundTint="#B5C7EC"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="6sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <EditText
+                android:id="@+id/etMensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="#EEEFF5"
+                android:ems="10"
+                android:hint="Escribe un mensaje"
+                android:inputType="text"
+                android:padding="9dp"
+                android:textColor="@color/black"
+                android:textColorHint="#646464" />
+
+            <Button
+                android:id="@+id/btSend"
+                android:layout_width="60dp"
+                android:layout_height="52sp"
+                android:layout_weight="0"
+                android:backgroundTint="#517EEF"
+                android:gravity="center"
+                app:cornerRadius="50sp"
+                app:icon="@android:drawable/ic_menu_send"
+                app:iconGravity="start"
+                app:iconTint="@color/white" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/buttonCloseSesion"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6sp"
+            android:backgroundTint="#4A71D1"
+            android:gravity="center"
+            android:text="CERRAR SESIÓN"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
